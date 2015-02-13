@@ -27,7 +27,6 @@ module Tw
     distance_in_minutes = ((to_time - from_time)/60.0).round
     distance_in_seconds = (to_time - from_time).round
     I18n.load_path << File.join(Tw.root, "lib/timeywimey/locale/en.yml")
-    puts I18n.load_path
     I18n.with_options :locale => options[:locale], :scope => options[:scope] do |locale|
       case distance_in_minutes
         when 0..1
